@@ -19,6 +19,6 @@ make -C build-cmake/build-rtems7-pc686-qemu
 ## Running
 
 ```
-./tools/run-i386-qemu ./build-cmake/build-rtems7-pc686-qemu
+./tools/run-i386-qemu.sh ./build-cmake/build-rtems7-pc686-qemu
 ```
 
