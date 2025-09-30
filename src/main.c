@@ -28,8 +28,8 @@
 #include <rtems/rtems-debugger.h>
 #endif
 
-#ifdef RTEMS_LEGACY_STACK
-/** From EPICS base: */
+#if defined(RTEMS_LEGACY_STACK) && defined(__i386__)
+/** From EPICS base, required for legacy stack */
 int
 rtems_ne2kpci_driver_attach (struct rtems_bsdnet_ifconfig *config, int attach)
 {
@@ -286,7 +286,7 @@ bsp_predriver_hook(void)
 
 #include <bsp/irq-info.h>
 
-#if __RTEMS_MAJOR__ >= 6
+#if RTEMS_BSD_STACK
 #include <rtems/netcmds-config.h>
 #endif
 
