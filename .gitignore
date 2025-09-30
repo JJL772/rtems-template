@@ -1,0 +1,24 @@
+*.o
+/build/
+*.obj
+.waf*
+.lock*
+/.cache/
+/build-*/
+compile_commands.json
+*.local.sh
+/configure/
+*.cache
+
+# Autotools junk
+aclocal.m4
+compile
+config.sub
+config.guess
+configure
+configure~
+dummycxx
+install-sh
+makefile.top.am
+makefile.top.in
+missing
